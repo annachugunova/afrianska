@@ -6,8 +6,8 @@ body {
 
 .slide {
 	width: 100%;
-	height: 100vh;
-	min-height: 600px;
+	/*height: 100vh;*/
+	min-height: 650px;
 	background: linear-gradient(0deg, rgba(152, 195, 232, 0.5) 8.84%, rgba(152, 195, 232, 0) 31.12%);
 	box-sizing: border-box;
 	padding-top: 40px;
@@ -26,7 +26,7 @@ body {
 }
 
 .menu-icon:hover {
-	fill: #56ccf2;
+	fill: #1F3F68;
 }
 
 .slide-content {
@@ -143,29 +143,26 @@ body {
 	background: #FFFFFF;
 	box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
 	border-radius: 10px;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .first-idea-image {
- position: absolute;
- top: 48px;
- left: 73px;
+  padding: 48px 40px 0 0;
 }
 
 .second-idea-image {
-	position: absolute;
-	top: -20px;
-	left: 78px;
+	position: relative;
+  top: -20px;
 }
 
 .third-idea-image {
-	position: absolute;
-	top: 49px;
-	left: 100px;
+	padding: 48px 32px 0 0;
 }
 
 .idea-form-info {
-	padding: 244px 48px 48px;
+	padding: 56px 48px 48px;
 	box-sizing: border-box;
 }
 
@@ -210,16 +207,25 @@ body {
 	fill: #1F3F68;
 }
 
-.projects-content {
-	padding: 0 212px 192px;
-	position: relative;
+.projects {
+	width: 100%;
 	display: flex;
+	justify-content: center;
+}
+
+.projects-content {
+	width: 942px;
+	/*box-sizing: border-box;*/
+	position: relative;
+	padding-bottom: 192px;
+	/*display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-between;*/
 }
 
 .projects-content-firstrow {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -242,8 +248,76 @@ body {
 	letter-spacing: 0.05em;
 	color: #1F3F68;
 	opacity: 0.6;
-	margin-left: 93px;
 }
+
+.projects-content-secondrow {
+	width: 100%;
+	height: 417px;
+	margin: 96px 0;
+	background-image: url("../image/Mask Group.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 10px;
+	position: relative;
+}
+
+.projects-content-secondrow img {
+	position: absolute;
+	bottom: 0;
+}
+
+.projects-content-secondrow-info {
+	position: absolute;
+	right: 48px;
+	top: 45px;
+	text-align: right;
+}
+
+.projects-content-secondrow-info h6, .projects-content-thirdrow-info h6 {
+	font-size: 28px;
+	line-height: 46px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	margin: 0 0 10px;
+}
+
+.projects-content-secondrow-info p, .projects-content-thirdrow-info p {
+	font-size: 15px;
+	line-height: 45px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	opacity: 0.8;
+	margin: 0;
+}
+
+.projects-content-thirdrow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.projects-content-thirdrow-left {
+	width: 422px;
+	height: 417px;
+	background-image: url("../image/Mask Group (1).png");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 10px;
+}
+
+.projects-content-thirdrow-right {
+	width: 422px;
+	height: 417px;
+	background-image: url("../image/Mask Group (2).png");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 10px;
+}
+
+.projects-content-thirdrow-info {
+	margin: 24px 0 0 32px;
+}
+
+
 
 @media screen and (max-width: 1000px) {
 	.slide {
@@ -271,11 +345,14 @@ body {
 
 	.idea .container {
 		width: 100%;
-		padding: 30px 10px;
+		padding: 100px 10px;
 	}
 
 	.idea-title {
-		padding-bottom: 20px;
+		width: 100%;
+		text-align: center;
+		padding: 0 20px 20px;
+		box-sizing: border-box;
 	}
 
 	.idea-row {
@@ -292,6 +369,25 @@ body {
 	.idea-form {
 		margin: 10px 20px;
 	}
+
+	.projects-content-firstrow {
+		flex-direction: column;
+	}
+
+	.projects-content-firstrow-title {
+		width: 100%;
+		text-align: center;
+		padding: 0 20px 20px;
+		box-sizing: border-box;
+	}
+	
+ 	.projects-content-secondrow {
+ 		margin-right: 10px;
+ 		margin-left: 10px;
+ 		width: calc(100% - 20px);
+ 	}
+
+
 }
 
 @media screen and (max-width: 620px) {
@@ -313,9 +409,46 @@ body {
 		padding: 0 10px;
 	}
 
-	.slide-content img {
-		display: none;
+	.idea-form {
+		height: initial;
 	}
+
+	.projects-content-firstrow-text {
+		width: 100%;
+		text-align: center;
+		padding: 0 20px 20px;
+		box-sizing: border-box;
+	}
+
+	.projects-content-secondrow {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+
+	.projects-content-secondrow img {
+		transform: scale(0.7);
+		left: -54px;
+		bottom: -54px;
+	}
+
+	.projects-content-secondrow-info {
+		text-align: center;
+		right: initial;
+	}
+
+	.projects-content-thirdrow {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.projects-content-thirdrow > div {
+		margin: 0 10px 50px;
+	}
+
 }
 
 @media screen and (max-width: 1000px) and (min-width: 620px) {
@@ -323,25 +456,48 @@ body {
 		width: 100%;
 		height: 240px;
 		display: flex;
+		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
+	}
+
+	.idea-form-img {
+		min-width: 250px;
+	}
+
+	.first-idea-image, .second-idea-image, .third-idea-image {
+		padding: 0;
+	}
+
+	.second-idea-image {
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 
 	.idea-form-info {
-		padding: 10px 10px 10px 240px;
+		padding: 10px 20px;
 	}
 
-	.first-idea-image, .second-idea-image {
-		left: -4px;
-	}
-
-	.third-idea-image {
-		left: 10px;
-	}
+	.projects-content-thirdrow > div {
+ 		width: 45%;
+ 		margin-right: 10px;
+ 		margin-left: 10px;
+ 	}
 
 }
 
-/*@media screen and (max-width: 420px) {
-	.idea-form {
-		width
+@media screen and (max-width: 460px) {
+	.projects-content-thirdrow > div {
+		width: calc(100% - 20px);
 	}
-}*/
+}
+
+@media screen and (max-width: 420px) {
+	.idea-form {
+		width: 100%;
+		margin: 10px 20px;
+	}
+
+
+}
