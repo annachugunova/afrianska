@@ -393,6 +393,7 @@ body {
 @media screen and (max-width: 620px) {
 	.slide {
 		padding: 0;
+		min-height: 420px;
 	}
 
 	.navigation {
@@ -407,6 +408,10 @@ body {
 
 	.slide-content {
 		padding: 0 10px;
+	}
+
+	.slide-content-button {
+		margin-bottom: 30px;
 	}
 
 	.idea-form {
@@ -447,6 +452,8 @@ body {
 
 	.projects-content-thirdrow > div {
 		margin: 0 10px 50px;
+		width: calc(100% - 20px);
+		background-size: cover;
 	}
 
 }
@@ -487,11 +494,6 @@ body {
 
 }
 
-@media screen and (max-width: 460px) {
-	.projects-content-thirdrow > div {
-		width: calc(100% - 20px);
-	}
-}
 
 @media screen and (max-width: 420px) {
 	.idea-form {
