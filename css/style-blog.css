@@ -85,6 +85,7 @@ body {
 	color: rgba(31, 63, 104, 0.6);
 
 	padding-left: 74px;
+	padding-right: 10px;
 	box-sizing: border-box;
 }
 
@@ -94,6 +95,130 @@ body {
 	left: 25px;
 	top: 16px;
 }
+
+.popular {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popular-content {
+	width: 942px;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popular-content-subtitle {
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #356EAD;
+	opacity: 0.8;
+	align-self: flex-start;
+}
+
+.popular-content-firstblock {
+	display: flex;
+	justify-content: space-between;
+	margin: 32px 0;
+}
+
+.popular-content-firstblock-main {
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.popular-content-firstblock-main-title {
+	font-family: 'Abhaya Libre', sans-serif;
+	font-size: 48px;
+	line-height: 58px;
+	letter-spacing: 0.04em;
+	color: #1F3F68;
+}
+
+.popular-content-text {
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #000000;
+	opacity: 0.6;
+}
+
+.popular-other {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.popular-other-left-author, .popular-other-left-date {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	color: #1F3F68;
+}
+
+.bookmark {
+	margin-right: 32px;
+	fill: #356EAD;
+}
+
+.share {
+	fill: #356EAD;
+}
+
+.bookmark:hover, .share:hover {
+	fill: #1F3F68;
+}
+
+.popular-other-left-date {
+	opacity: 0.4;
+}
+
+.popular-content-secondblock {
+	display: flex;
+	justify-content: space-between;
+}
+
+.popular-content-secondblock-article {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.popular-content-secondblock-main-title {
+	font-family: 'Abhaya Libre', sans-serif;
+	font-size: 25px;
+	line-height: 35px;
+	letter-spacing: 0.04em;
+	color: #1F3F68;
+}
+
+.popular-content-secondblock-article img, .popular-content-secondblock-main > div  {
+	margin-bottom: 16px;
+}
+
+.popular-content-secondblock-main > div:last-child {
+	margin-bottom: 0;
+}
+
+.popular-content-all {
+	font-size: 16px;
+	line-height: 20px;
+	text-align: right;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #356EAD;
+	opacity: 0.8;
+	align-self: flex-end;
+	margin: 54px 0 24px;
+}
+
 
 
 @media screen and (max-width: 1000px) {
@@ -110,6 +235,11 @@ body {
 
 	}
 
+	.popular-content {
+		width: calc(100% - 20px);
+	}
+
+	
 	
 }
 
@@ -132,13 +262,107 @@ body {
 		font-size: 35px;
 		line-height: 65px;
 	}
+
+	.popular-content-firstblock {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.popular-content-firstblock img, .popular-content-firstblock-main > div {
+		margin-bottom: 16px;
+	}
+
+	.popular-content-firstblock img {
+		width: 300px;
+		height: 200px;
+	}
+
+	.popular-content-firstblock-main {
+		width: 300px;
+		margin-right: 0;
+	}
+
+	.popular-content-firstblock-main > div:last-child {
+		margin-bottom: 0;
+	}
+
+	.popular-content-firstblock-main-title {
+		font-size: 25px;
+		line-height: 35px;
+	}
+	
+	.popular-content-secondblock {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.popular-content-secondblock-article {
+		margin-bottom: 32px;
+	}
+
+	.popular-content-secondblock-article:last-child {
+		margin-bottom: 0;
+	}
 }
 	
 
 
 
 @media screen and (max-width: 1000px) and (min-width: 621px) {
+	.popular-content-firstblock {
+		flex-direction: row-reverse;
+	}
+
+	.popular-content-firstblock img {
+		width: 300px;
+		height: 200px;
+	}
+
+	.popular-content-firstblock-main {
+		margin-left: 20px;
+		margin-right: 0;
+	}
+
+	.popular-content-firstblock-main-title {
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+	.popular-content-secondblock {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.popular-content-secondblock-article {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 32px;
+	}
+
+	.popular-content-secondblock-article img {
+		margin-bottom: 0;
+	}
+
+	.popular-content-secondblock-main {
+		margin-left: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.popular-content-secondblock-main > div {
+		margin-bottom: 0;
+	}
+
+	.popular-other {
+		width: 280px;
+	}
 	
+
+	
+
+
 }
 
 
