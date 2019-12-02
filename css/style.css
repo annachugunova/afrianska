@@ -382,8 +382,7 @@ body {
 	z-index: 1;
 }
 
-
-.footer-info {
+.footer-info, .footer-about {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -393,6 +392,7 @@ body {
 .footer-info-content {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	width: 942px;
 	padding-top: 91px;
 	padding-right: 80px;
@@ -401,7 +401,7 @@ body {
 
 .footer-separate {
 	height: 1px;
-	width: 70%;
+	width: 88%;
 	background: #fff;
 	margin: 96px 0;
 	opacity: .4;
@@ -447,6 +447,111 @@ body {
 	background: #1F3F68;
 }
 
+.footer-about-content {
+	display: flex;
+	flex-direction: column;
+	width: 942px;
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+
+.footer-about-content-block {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.footer-about-content-contacts {
+	width: 300px;
+}
+
+.footer-about-content-contacts-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+
+.footer-about-content-contacts-title img {
+	margin-right: 16px;
+	width: 48px;
+	height: 48px;
+}
+
+.footer-about-content-contacts-title h3 {
+	font-size: 28px;
+	line-height: 46px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+.footer-about-content-contacts-row {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 24px;
+
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+}
+
+.footer-about-content-contacts-row a, .footer-about-follow a {
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+}
+
+.footer-about-content-contacts-row a:hover, .footer-about-follow a:hover {
+	opacity: 0.6;
+}
+
+.footer-about-content-contacts-row:last-child {
+	margin-bottom: 0;
+}
+
+.footer-about-content-contacts-row-letter {
+	margin-right: 16px;
+}
+
+.footer-about-content-aboutfollow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-about-follow {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-about-follow:first-child {
+ 	margin-right: 20px;
+ }
+
+.footer-about-follow p {
+ 	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	margin: 0 0 32px;
+ }
+
+.footer-about-follow a {
+ 	margin-bottom: 16px;
+ }
+
+.footer-about-rights {
+	margin: 64px 0;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	opacity: 0.4;
+	align-self: flex-start;
+}
 
 
 
@@ -518,11 +623,11 @@ body {
 		box-sizing: border-box;
 	}
 	
- 	.projects-content-secondrow {
- 		margin-right: 10px;
- 		margin-left: 10px;
- 		width: calc(100% - 20px);
- 	}
+	.projects-content-secondrow {
+		margin-right: 10px;
+		margin-left: 10px;
+		width: calc(100% - 20px);
+	}
 
 	.clients-content-table {
 		margin: 100px 10px;
@@ -533,11 +638,40 @@ body {
 		box-sizing: border-box;
 		padding: 45px 20% 0 10px;
 		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.footer-info-button {
 		margin-top: 30px;
 	}
+
+	.footer-separate {
+		margin: 50px 0;
+	}
+
+	.footer-about-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 20% 0 10px;
+  }
+
+	.footer-about-content-contacts {
+		width: 100%;
+	}
+
+	.footer-about-content-block {
+		flex-direction: column;
+	}
+
+	.footer-about-content-contacts {
+		margin-bottom: 80px;
+	}
+
+	.footer-about-follow {
+		width: 40%;
+	}
+
+
 }
 
 
@@ -556,8 +690,8 @@ body {
 
 	.slide-content-title {
 		font-size: 30px;
-    line-height: 35px;
-    padding-top: 20px;
+	line-height: 35px;
+	padding-top: 20px;
 	}
 
 	.slide-content {
@@ -661,10 +795,10 @@ body {
 	}
 
 	.projects-content-thirdrow > div {
- 		width: 45%;
- 		margin-right: 10px;
- 		margin-left: 10px;
- 	}
+		width: 45%;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 
 	.clients-content-table-logo {
 		width: calc(100% / 3);
@@ -708,5 +842,17 @@ body {
 
 	.clients-content-table :last-child {
 		border-bottom: none;
+	}
+
+	.footer-about-content-aboutfollow {
+		flex-direction: column;
+	}
+
+	.footer-about-follow {
+		width: 100%;
+	}
+
+	.footer-about-follow:last-child {
+		margin-top: 80px;
 	}
 }
