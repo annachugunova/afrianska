@@ -295,6 +295,198 @@ body {
 	fill: #1F3F68;
 }
 
+.footer {
+	/*background: #5A98D0;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+}
+
+.footer:before {
+	content: '';
+	position: absolute;
+	width: 95%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #316099;
+	border-radius: 0px 200px 0px 0px;
+	z-index: 1;
+}
+
+.footer-info, .footer-about {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+}
+
+.footer-info-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 942px;
+	padding-top: 91px;
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+
+.footer-separate {
+	height: 1px;
+	width: 88%;
+	background: #fff;
+	margin: 96px 0;
+	opacity: .4;
+	z-index: 2;
+}
+
+.footer-info-main {
+	max-width: 460px;
+}
+
+.footer-info-main-title h2 {
+	font-size: 33px;
+	line-height: 43px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	margin: 0 0 32px 0;
+
+}
+
+.footer-info-main-text {
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	opacity: 0.6;
+}
+
+.footer-info-button {
+	width: 220px;
+	height: 56px;
+	background: #5A98D0;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	color: #FFFFFF;
+}
+
+.footer-info-button:hover {
+	background: #1F3F68;
+}
+
+.footer-about-content {
+	display: flex;
+	flex-direction: column;
+	width: 942px;
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+
+.footer-about-content-block {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.footer-about-content-contacts {
+	width: 300px;
+}
+
+.footer-about-content-contacts-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+
+.footer-about-content-contacts-title img {
+	margin-right: 16px;
+	width: 48px;
+	height: 48px;
+}
+
+.footer-about-content-contacts-title h3 {
+	font-size: 28px;
+	line-height: 46px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+.footer-about-content-contacts-row {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 24px;
+
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+}
+
+.footer-about-content-contacts-row a, .footer-about-follow a {
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+}
+
+.footer-about-content-contacts-row a:hover, .footer-about-follow a:hover {
+	opacity: 0.6;
+}
+
+.footer-about-content-contacts-row:last-child {
+	margin-bottom: 0;
+}
+
+.footer-about-content-contacts-row-letter {
+	margin-right: 16px;
+}
+
+.footer-about-content-aboutfollow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-about-follow {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-about-follow:first-child {
+	margin-right: 20px;
+ }
+
+.footer-about-follow p {
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	margin: 0 0 32px;
+ }
+
+.footer-about-follow a {
+	margin-bottom: 16px;
+ }
+
+.footer-about-rights {
+	margin: 64px 0;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	opacity: 0.4;
+	align-self: flex-start;
+}
+
+
 
 
 @media screen and (max-width: 1000px) {
@@ -315,6 +507,42 @@ body {
 		width: calc(100% - 20px);
 	}
 	
+	.footer-info-content {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 45px 20% 0 10px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.footer-info-button {
+		margin-top: 30px;
+	}
+
+	.footer-separate {
+		margin: 50px 0;
+	}
+
+	.footer-about-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 20% 0 10px;
+  }
+
+	.footer-about-content-contacts {
+	}
+
+	.footer-about-content-block {
+		flex-direction: column;
+	}
+
+	.footer-about-content-contacts {
+		margin-bottom: 80px;
+	}
+
+	.footer-about-follow {
+		width: 40%;
+	}
 }
 
 
@@ -477,14 +705,24 @@ body {
 		margin-bottom: 0;
 	}
 	
-
-	
-
-
 }
 
 
 
+
+@media screen and (max-width: 420px) {
+	.footer-about-content-aboutfollow {
+		flex-direction: column;
+	}
+
+	.footer-about-follow {
+		width: 100%;
+	}
+
+	.footer-about-follow:last-child {
+		margin-top: 80px;
+	}
+}
 
 
 
