@@ -14,11 +14,13 @@ body {
 }
 
 .navigation {
-	height: 48px;
-	margin: 0 83px 45px;
+	/*height: 48px;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	padding: 0px 83px 40px;
+	box-sizing: border-box;
 }
 
 .menu-icon {
@@ -27,6 +29,49 @@ body {
 
 .menu-icon:hover {
 	fill: #1F3F68;
+}
+
+.menu {
+	position: relative;
+	z-index: 2;
+}
+
+.menu-list {
+	display: none;
+	width: 250px;
+	position: absolute;
+	top: 32px;
+	right: 0;
+	background: #FFFFFF;
+	box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+	border-radius: 10px;
+	flex-direction: column;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.menu:hover .menu-list {
+	display: flex;
+}
+
+.menu-list a {
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #356EAD;
+	opacity: 0.8;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.menu-list a:hover {
+	background: rgba(90, 152, 208, 0.6);
+	color: #FFFFFF;
+}
+
+.menu-list a.active {
+	background: #5A98D0;
+	color: #FFFFFF;
 }
 
 .slide-content {
@@ -558,12 +603,6 @@ body {
 
 
 @media screen and (max-width: 1000px) {
-	.slide {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
 	.slide-content {
 		padding: 0 83px;
 		box-sizing: border-box;
@@ -679,12 +718,15 @@ body {
 
 @media screen and (max-width: 620px) {
 	.slide {
-		padding: 0;
+		padding-top: 20px;
 		min-height: 420px;
 	}
 
 	.navigation {
-		margin: 0 10px 30px;
+		margin: 0 10px;
+		padding: 0;
+		top: 20px;
+		width: calc(100% - 20px);
 	}
 
 	.slide-content-title {
@@ -694,7 +736,7 @@ body {
 	}
 
 	.slide-content {
-		padding: 0 10px;
+		padding: 60px 10px 0;
 	}
 
 	.slide-content-button {
