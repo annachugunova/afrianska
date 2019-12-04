@@ -462,7 +462,7 @@ body {
 }
 
 .footer-about-content-contacts {
-	width: 300px;
+	max-width: 300px;
 }
 
 .footer-about-content-contacts-title {
