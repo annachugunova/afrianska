@@ -6,10 +6,10 @@
     <title>Afrianska</title>
 
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./static/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">s
     <link rel="stylesheet" type="text/css" href="./css/style-contacts.css">
     <link rel="icon" type="image/png" href="./image/favicon-16x16.png">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -88,7 +88,7 @@
 
         </div>
 
-        <div class="contacts-content-message">
+        <form id="contacts-form" class="contacts-content-message">
           <div class="contacts-title">Send Us Message</div>
 
           <div class="contacts-content-message-group">
@@ -103,11 +103,11 @@
 
           <div class="contacts-content-message-group">
             <div class="contacts-content-message-group-subtitle">Message</div>
-            <textarea placeholder="Your Message"></textarea>
+            <textarea name="message" placeholder="Your Message"></textarea>
           </div>
 
-          <button class="contacts-content-message-button">SUBMIT</button>
-        </div>
+          <button type="submit" class="contacts-content-message-button">SUBMIT</button>
+        </form>
 
       </div>
 
@@ -184,6 +184,8 @@
       </div>
 
     </div> 
+
+    <script src="./js/main.js"></script>
 
 
   </body>

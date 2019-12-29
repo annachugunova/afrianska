@@ -256,11 +256,16 @@ body {
 	background: #1F3F68;
 }
 
+.contacts-content-message .error {
+	border-color: red;
+}
+
 .contacts iframe {
 	width: 942px;
 	height: 480px;
 	margin-bottom: 96px;
 }
+
 
 
 .footer {
